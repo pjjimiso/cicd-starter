@@ -44,7 +44,7 @@ func TestGetAPIKey(t *testing.T) {
 
 			diff := cmp.Diff(tc.expectedKey, key)
 			if diff != "" {
-				t.Fatalf(diff)
+				t.Fatal(diff)
 			}
 		})
 	}
