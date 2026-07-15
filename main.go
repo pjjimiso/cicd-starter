@@ -90,9 +90,8 @@ func main() {
 
 	router.Mount("/v1", v1Router)
 	srv := &http.Server{
-		Addr:              ":" + port,
-		Handler:           router,
-		ReadHeaderTimeout: 10,
+		Addr:    ":" + port,
+		Handler: router,
 	}
 
 	sanitizedPort := strings.ReplaceAll(port, "\n", "\\n")
